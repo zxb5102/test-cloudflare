@@ -1,6 +1,6 @@
 import { cookies } from "next/headers";
 
-export const runtime = 'nodejs';
+export const runtime = 'edge';
 
 export default () => {
   const cookieStore = cookies();
