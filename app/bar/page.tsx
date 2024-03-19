@@ -1,5 +1,7 @@
 import { cookies } from "next/headers";
 
+export const runtime = 'nodejs';
+
 export default () => {
   const cookieStore = cookies();
   const dd = cookieStore.getAll().map((item) => {
