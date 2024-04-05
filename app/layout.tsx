@@ -43,7 +43,7 @@ window.fbAsyncInit = function() {
           dangerouslySetInnerHTML={{
             __html: `
             window["google_cbk"] = function () {
-              console.log(arguments);
+              console.log(arguments);;;;
             };
         `,
           }}
