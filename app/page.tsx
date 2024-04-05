@@ -1,5 +1,5 @@
 export default function Home() {
   return (
-    <div>index page</div>
+    <div>index page2</div>
   );
 }
