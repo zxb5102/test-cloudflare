@@ -46,7 +46,7 @@ window.fbAsyncInit = function() {
           name="google-signin-client_id"
           content="182460454773-57gavjd9r4neebg4io9f6e0rm4715tsd.apps.googleusercontent.com"
         />
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://accounts.google.com/gsi/client" async></script>
         <div dangerouslySetInnerHTML={{ __html: script }} />
         <div data-test="data-test">{children}</div>
       </body>
