@@ -48,7 +48,7 @@ window.fbAsyncInit = function() {
         `,
           }}
         ></script>
-        <script src="https://accounts.google.com/gsi/client" async></script>
+        {/* <script src="https://accounts.google.com/gsi/client" async></script> */}
         <div dangerouslySetInnerHTML={{ __html: script }} />
         <div data-test="data-test">{children}</div>
       </body>
