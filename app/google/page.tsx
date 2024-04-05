@@ -6,7 +6,7 @@
 export default () => {
   return (
     <div>
-      <div>google 登入</div>
+      <div>google 登入2</div>
       <div
         id="g_id_onload"
         data-client_id="182460454773-57gavjd9r4neebg4io9f6e0rm4715tsd.apps.googleusercontent.com"
