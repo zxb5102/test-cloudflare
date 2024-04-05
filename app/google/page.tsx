@@ -1,11 +1,9 @@
 "use client";
-import { useEffect } from "react";
+
+// import ErrorBoundary from "@/components/ErrorWrap";
+
+// import { ErrorBoundary } from "next/dist/client/components/error-boundary";
 export default () => {
-  useEffect(() => {
-    window["google_cbk"] = function(){
-        console.log(arguments)
-    };
-  }, []);
   return (
     <div>
       <div>google 登入</div>

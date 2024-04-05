@@ -1,4 +1,3 @@
-'use client'
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -40,6 +39,15 @@ window.fbAsyncInit = function() {
           name="google-signin-client_id"
           content="182460454773-57gavjd9r4neebg4io9f6e0rm4715tsd.apps.googleusercontent.com"
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window["google_cbk"] = function () {
+              console.log(arguments);
+            };
+        `,
+          }}
+        ></script>
         <script src="https://accounts.google.com/gsi/client" async></script>
         <div dangerouslySetInnerHTML={{ __html: script }} />
         <div data-test="data-test">{children}</div>
