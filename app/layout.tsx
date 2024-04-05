@@ -14,12 +14,36 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const script = `
+ 
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '390554293943956',
+    cookie     : true,
+    xfbml      : true,
+    version    : 'v19.0'
+  });
+    
+  FB.AppEvents.logPageView();   
+    
+};
+
+(function(d, s, id){
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "https://connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));
+</script> 
+  
+  `;
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div data-test="data-test">
-          {children}
-        </div>
+        <div dangerouslySetInnerHTML={{ __html: script }} />
+        <div data-test="data-test">{children}</div>
       </body>
     </html>
   );
