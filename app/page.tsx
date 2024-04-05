@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export default function Home() {
   const handler = () => {
-    window.FB.getLoginStatus(function (response) {
+    window['FB'].getLoginStatus(function (response) {
       console.log(response);
       // window.statusChangeCallback(response);
     });
