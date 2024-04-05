@@ -1,19 +1,27 @@
 "use client";
 
-import { useEffect } from "react";
-
 export default function Home() {
-  const handler = () => {
-    window['FB'].getLoginStatus(function (response) {
-      console.log(response);
-      // window.statusChangeCallback(response);
+
+  const login = () => {
+    window["FB"].login(function (response) {
+      console.log("登入回调信息", response);
     });
   };
-  useEffect(()=>{
-  },[]);
+  const getStatus = () => {
+    window["FB"].getLoginStatus(function (response) {
+      console.log("登入状态", response);
+    });
+  };
+  const logout = () => {
+    window["FB"].logout((response) => {
+      console.log("退出响应", response);
+    });
+  };
   return (
     <div>
-      <div onClick={handler}>login</div>
+      <div onClick={login}>登入</div>
+      <div onClick={getStatus}>获取登入状态</div>
+      <div onClick={logout}>退出</div>
     </div>
   );
 }
